@@ -1,5 +1,18 @@
 'use strict';
 
+class LoggingButton extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return React.createElement("button", {
+      onClick: () => this.handleClick()
+    }, "Click me");
+  }
+
+}
+
 class LikeButton extends React.Component {
   constructor(props) {
     super(props);
